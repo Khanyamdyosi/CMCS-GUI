@@ -1,0 +1,22 @@
+﻿<Window x:Class="CMCS_UI.SubmitClaim"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CMCS_UI"
+        mc:Ignorable="d"
+        Title="SubmitClaim" Height="500" Width="1200">
+    <Grid>
+        <TextBlock Text="Submit Claim Form" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Hours Worked" Margin="10,137,-10,-137" />
+        <TextBox Name="HoursWorkedTextBox" Width="200"/>
+        <Label Content="Hourly Rate (Auto-Filled)" Margin="10,155,-10,-155" />
+        <TextBox Name="HourlyRateTextBox" IsReadOnly="True" Width="200" TextChanged="HourlyRateTextBox_TextChanged" />
+        <Label Content="Total Amount" Margin="10,173,-10,-173" />
+        <Label Margin="10,209,-10,-209">
+            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+        </Label>
+        <Button Content="Upload File" Click="UploadFile_Click" Margin="313,66,742,370"/>
+        <Button Content="Submit Claim" Click="SubmitClaim_Click" Margin="10,66,1015,370"/>
+    </Grid>
+</Window>

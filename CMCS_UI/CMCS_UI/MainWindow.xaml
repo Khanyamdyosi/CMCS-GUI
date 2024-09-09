@@ -1,0 +1,30 @@
+﻿<Window x:Class="CMCS_UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CMCS_UI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock Text="Recent Submissions" FontSize="16" FontWeight="Bold"/>
+        <DataGrid Name="RecentClaimsDataGrid" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Date" Binding="{Binding Date}"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}"/>
+                <DataGridTextColumn Header="Amount" Binding="{Binding TotalAmount}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Submit New Claim" Margin="300,51,386,355" Click="OpenSubmitClaimForm"/>
+        <Button Content="View Claim History" Margin="10,51,620,355" Click="OpenClaimHistory"/>
+        <TextBlock Text="Notifications" FontSize="16" FontWeight="Bold" Margin="0,126,10,10"/>
+        <TextBlock Name="NotificationTextBlock" Text="No new notifications" Margin="0,151,10,44" />
+        <TextBlock HorizontalAlignment="Left" Margin="6,194,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="77" Width="178"/>
+
+
+
+
+
+    </Grid>
+
+</Window>
